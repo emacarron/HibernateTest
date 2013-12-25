@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="net.javabeat.hibernate.Contact" table="contact">
+        <id name="contactId" type="java.lang.Integer">
+            <column name="CONTACT_ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="10" not-null="true" unique="true" />
+        </property>
+      </class>
+</hibernate-mapping>
